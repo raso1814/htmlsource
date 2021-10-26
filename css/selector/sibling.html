@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*div h1 + h2 {
+        color: red;
+      }*/
+      div h1 ~ h2 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--부모 : html 
+        자식 : head, body, -> >꺽쇠 
+        자손 : head, body, head와 body 안에 있는 태그 div등 -> 공백
+    -->
+    <div>
+      <h1>인접형제 선택자</h1>
+      <h2>형제1</h2>
+      <h2>형제2</h2>
+      <nav>
+        <h2>제목</h2>
+      </nav>
+    </div>
+  </body>
+</html>

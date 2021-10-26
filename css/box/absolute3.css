@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 200px;
+}
+
+.container {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: yellow;
+  position: relative; /*이게 있어야 자식 입장에서 부모위치가 보임*/
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.a {
+  background-color: red;
+  left: 0;
+  top: 0;
+}
+
+.b {
+  background-color: green;
+  right: 0;
+  top: 0;
+}
+.c {
+  background-color: blue;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clearfix::after {
+        /*div>.clearfix 다음에 실행할것
+        토마토 child와 바이올렛 사이에 흐르는 것을 제거하고 블록 공백 넣기*/
+        content: "";
+        clear: both;
+        display: block;
+      }
+      .child1 {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        color: white;
+        font-size: 30px;
+        margin: 10px;
+        /* display: inline-block; */
+        float: left;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: violet;
+        /* clear: left; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent clearfix">
+      <div class="child1">1</div>
+      <div class="child1">2</div>
+      <div class="child1">3</div>
+    </div>
+    <div class="box">4</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
+      obcaecati iure, minima natus itaque quibusdam iste cumque labore at!
+      Possimus, repudiandae? Asperiores beatae accusamus voluptatem sint ipsam
+      suscipit, nostrum nulla.
+    </p>
+  </body>
+</html>

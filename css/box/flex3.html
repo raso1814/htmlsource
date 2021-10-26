@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex; /*주축이 있음(왼->오 수평방향) 기본 옆으로, 교차축(위->아래 수직방향)*/
+        flex-direction: column; /*플렉스 뱡향 지정 row : 주축 가로, column*/
+        flex-wrap: wrap-reverse; /*플렉스 항목을 한줄 또는 여러줄로 배치no-wrap 기본, wrap*/
+        justify-content: space-evenly; /*주축의 정렬방법 flex-start 기본 end, center, space-around*/
+        border: 1px solid;
+      }
+      .container div {
+        width: 100px;
+        height: 100px;
+      }
+
+      .container div:first-child {
+        background-color: red;
+      }
+
+      .container div:nth-child(2) {
+        background-color: blue;
+      }
+
+      .container div:nth-child(3) {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>item1</div>
+      <div>item2</div>
+      <div>item3</div>
+    </div>
+  </body>
+</html>

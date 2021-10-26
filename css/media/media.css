@@ -1,0 +1,84 @@
+/* 전체 문서의 여백과 padding 0으로 지정, 요소 크기 content+padding+border */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 문서의 배경색 : rgb(9,100,160) */
+body {
+  background: rgb(9, 100, 160);
+}
+
+/* 컨테이너 width 320px, margin 위,아래 50px, 좌, 우 auto */
+#container {
+  width: 320px;
+  margin: 50px auto;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #0f0f0f33;
+  background: #fff;
+  margin: 20px 10px;
+}
+
+.words {
+  position: absolute;
+  left: 100px;
+  top: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 1720px 이상이면 카드가 한줄에 보이기 */
+@media screen and (min-width: 1720px) {
+  #container {
+    width: 1710px;
+    margin: 50px auto;
+  }
+
+  .card {
+    position: relative;
+    float: left;
+    width: 550px;
+    height: 250px;
+    border: 1px solid;
+    background: #fff;
+    margin: 20px 10px;
+  }
+
+  .words {
+    position: absolute;
+    left: 300px;
+    top: 50px;
+    width: 200px;
+    text-align: center;
+  }
+}
+
+/* 768~1719px 이면 각 카드는 한줄에 보이기(사진,글자) */
+@media screen and (min-width: 768px) and(max-width:1719px) {
+  #container {
+    width: 570px;
+    margin: 50px auto;
+  }
+
+  .card {
+    position: relative;
+    width: 550px;
+    height: 250px;
+    border: 1px solid;
+    background: #fff;
+    margin: 20px 10px;
+  }
+
+  .words {
+    position: absolute;
+    left: 310px;
+    top: 50px;
+    width: 200px;
+  }
+}

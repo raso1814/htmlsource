@@ -1,0 +1,65 @@
+/* 요소 크기 : content + padding + border */
+* {
+  box-sizing: border-box;
+}
+
+/* 전체 문서의 배경색 #ecf0f1 */
+body {
+  background: #ecf0f1;
+}
+
+.wrapper {
+  max-width: 60rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.flexbg {
+  display: flex;
+}
+
+.flexbg main {
+  background: #fff;
+  width: 60%;
+  order: 2;
+  padding: 16px;
+}
+
+.flexbg .left {
+  order: 1;
+  background: #3498db;
+}
+
+.flexbg .right {
+  order: 3;
+  background: #34495e;
+}
+
+/* 481-768px left,right 아래쪽으로 이동 */
+@media screen and (max-width: 768px) {
+  .flexbg {
+    /* display: flex; */
+    flex-wrap: wrap;
+  }
+
+  .flexbg main {
+    width: 100%;
+    order: 1;
+  }
+
+  .flexbg .sidebar {
+    width: 50%;
+  }
+
+  .flexbg .left {
+    order: 2;
+    background: #3498db;
+  }
+}
+
+/* 1-480 각 div가 하나의 행을 차지 */
+@media screen and (max-width: 480px) {
+  .flexbg .sidebar {
+    width: 100%;
+  }
+}
